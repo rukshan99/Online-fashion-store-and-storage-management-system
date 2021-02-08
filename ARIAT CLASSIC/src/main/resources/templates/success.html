@@ -1,0 +1,13 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Adding Success</title>
+    </head>
+    <body>
+    <form action="#" th:action="@{/Success}">
+        <center>
+            <span th:text="'A verification email has been sent to: ' + ${emailId}"></span>
+        </center>
+    </form>
+    </body>
+</html>

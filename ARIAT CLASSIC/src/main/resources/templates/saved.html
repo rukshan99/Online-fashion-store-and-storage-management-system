@@ -1,0 +1,148 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="utf-8" ></meta>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" ></meta>
+    <title>Feedback Details</title>
+
+    <link th:rel="stylesheet" th:href="@{webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} "></link>
+    		<!-- MATERIAL DESIGN ICONIC FONT -->
+		<link rel="stylesheet" th:href="@{fonts/material-design-iconic-font/css/material-design-iconic-font.min.css}" ></link>
+		<!-- Favicon -->
+		<link th:href="@{img/favicon.ico}" rel="shortcut icon"></link>
+
+		<!-- Google Font -->
+		<link th:href="@{https://fonts.googleapis.com/css?family=Josefin+Sans:300,300i,400,400i,700,700i}" rel="stylesheet" ></link>
+		<!-- STYLE CSS -->
+
+		<link th:href="@{/css/style.css}" rel="stylesheet" ></link>
+		<link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" ></link>
+		<link th:href="@{/css/font-awesome.min.css}" rel="stylesheet" ></link>
+		<link th:href="@{/css/flaticon.css}" rel="stylesheet" ></link>
+		<link th:href="@{/css/slicknav.min.css}" rel="stylesheet" ></link>
+		<link th:href="@{/css/jquery-ui.min.css}" rel="stylesheet" ></link>
+		<link th:href="@{/css/owl.carousel.min.css}" rel="stylesheet" ></link>
+		<link th:href="@{/css/animate.css}" rel="stylesheet" ></link>
+		<link th:href="@{/css/inventorystyle.css}" rel="stylesheet" ></link>
+</head>
+<body>
+	<!-- Header section -->
+	<header class="header-section">
+		<div class="header-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-2 text-center text-lg-left">
+						<!-- logo -->
+						<a href="./index.html" class="site-logo">
+							<img src="img/black 1.png" alt=""></img>
+						</a>
+					</div>
+
+							
+								<h2>Welcome to the Admin Dashboard</h2>
+							
+						</div>
+					</div>
+				</div>
+			
+		
+		<nav class="main-navbar">
+			<div class="container">
+				<!-- menu -->
+				<ul class="main-menu">
+				<li><a href="/Index">Home</a></li>
+					<li><a href="#">Store Details</a>
+						<ul class="sub-menu">
+							<li><a href="/AddProduct">Store Product Details Form</a></li>
+							<li><a href="#">View Store Product Details</a></li>
+							<li><a href="#">Reports</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Customer Details</a>
+						<ul class="sub-menu">
+							<li><a href="/customerDetails">View Customer Details</a></li>
+							<li><a href="#">View E-mail Confirmation Details</a></li>
+							<li><a href="#">Reports</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Employee Details</a>
+						<ul class="sub-menu">
+							<li><a href="/employee">Employee Details Form</a></li>
+							<li><a href="/attendance">Attendance Marking Form</a></li>
+							<li><a href="#">View Employee Details</a></li>
+							<li><a href="#">View Attendance Details</a></li>
+							<li><a href="#">Employee Reports</a></li>
+							<li><a href="#">Attendance Reports</a></li>							
+						</ul>
+					</li>
+					<li><a href="#">Payment Details</a>
+						<ul class="sub-menu">
+							<li><a href="#">View Payment Details</a></li>
+							<li><a href="#">Reports</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Inventory Details</a>
+						<ul class="sub-menu">
+							<li><a href="/inventory">Inventory Products Form</a></li>
+							<li><a href="/inventoryDetails">View Product Details</a></li>
+							<li><a href="#">Reports</a></li>						
+						</ul>
+					</li>
+					<li><a href="#">Delivery Details</a>
+						<ul class="sub-menu">
+							<li><a href="/delivery">Delivery Details Form</a></li>
+							<li><a href="#">Vehicle Details Form</a></li>
+							<li><a href="#">View Delivery Details</a></li>
+							<li><a href="#">View Vehicle Details</a></li>
+							<li><a href="#">Reports</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Feedback Details</a>
+						<ul class="sub-menu">
+							<li><a href="/saved">View Feedback Details</a></li>
+							<li><a href="#">Live Chat Form</a></li>
+							<li><a href="#">Reports</a></li>						
+						</ul>
+					</li>
+					<li><a href="#">Promotion Details</a>
+						<ul class="sub-menu">
+							<li><a href="#">Promotion Details Form</a></li>
+							<li><a href="#">View Promotion Details</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<!-- Header section end -->
+	<table>
+		<thead>
+			<tr>
+				<th >Rate Id</th>
+				<th >Name </th>
+				<th >Email </th>
+				<th >Rate </th>
+				<th >Comment</th>			
+				
+			</tr>
+		</thead>
+		<tbody>	
+			<tr th:if="${RatingList.empty}">
+            	<td colspan="2"> No Valid feedback </td>
+      	    </tr>
+			<tr th:each="Rating : ${RatingList}">
+				<td width="20px" th:text="${Rating.RateId}"></td>
+				<td th:text="${Rating.Name}"></td>
+				<td th:text="${Rating.Email}"></td>
+				<td th:text="${Rating.Rate}"></td>
+				<td th:text=${Rating.Comment}></td>
+
+				
+				
+		</tr>
+    	</tbody>	
+	</table>
+	
+
+</body>
+</html>

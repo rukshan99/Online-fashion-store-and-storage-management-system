@@ -1,0 +1,176 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="utf-8" ></meta>
+		<title>Customer List</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" ></meta>
+
+<link
+	href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap"
+	rel="stylesheet">
+<link
+	href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,500,500i,600,600i,700,700i&display=swap"
+	rel="stylesheet">
+
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<!-- MATERIAL DESIGN ICONIC FONT -->
+		<link rel="stylesheet" th:href="@{fonts/material-design-iconic-font/css/material-design-iconic-font.min.css}" ></link>
+		<!-- Favicon -->
+		<link th:href="@{img/favicon.ico}" rel="shortcut icon"></link>
+
+		<!-- Google Font -->
+		<link th:href="@{https://fonts.googleapis.com/css?family=Josefin+Sans:300,300i,400,400i,700,700i}" rel="stylesheet" ></link>
+		<!-- STYLE CSS -->
+		<link th:href="@{/css/loginstyle.css}" rel="stylesheet" ></link>
+		<link th:href="@{/css/style.css}" rel="stylesheet" ></link>
+		<link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" ></link>
+		<link th:href="@{/css/font-awesome.min.css}" rel="stylesheet" ></link>
+		<link th:href="@{/css/flaticon.css}" rel="stylesheet" ></link>
+		<link th:href="@{/css/slicknav.min.css}" rel="stylesheet" ></link>
+		<link th:href="@{/css/jquery-ui.min.css}" rel="stylesheet" ></link>
+		<link th:href="@{/css/owl.carousel.min.css}" rel="stylesheet" ></link>
+		<link th:href="@{/css/animate.css}" rel="stylesheet" ></link>
+	</head>
+<body>
+
+	<!-- Header section -->
+	<header class="header-section">
+		<div class="header-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-2 text-center text-lg-left">
+						<!-- logo -->
+						<a href="./index.html" class="site-logo">
+							<img src="img/black 1.png" alt=""></img>
+						</a>
+					</div>
+					<div class="col-xl-6 col-lg-5">
+						<form class="header-search-form">
+							<input type="text" placeholder="Search ...."></input>
+							<button><i class="flaticon-search"></i></button>
+						</form>
+					</div>
+					<div class="col-xl-4 col-lg-10">
+						<div class="user-panel">
+							<div class="up-item">
+								<i class="flaticon-profile"></i>
+								<a href="#">Sign</a> In or <a href="/register">Create Account</a>
+							</div>
+							<div class="up-item">
+								<div class="shopping-card">
+									<i class="flaticon-bag"></i>
+									<span>0</span>
+								</div>
+								<a href="#">Shopping Cart</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<nav class="main-navbar">
+			<div class="container">
+				<!-- menu -->
+				<ul class="main-menu">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Women</a></li>
+					<li><a href="#">Men</a></li>
+					<li><a href="#">Jewelry
+						<span class="new">New</span>
+					</a></li>
+					<li><a href="#">Shoes</a>
+						<ul class="sub-menu">
+							<li><a href="#">Sneakers</a></li>
+							<li><a href="#">Sandals</a></li>
+							<li><a href="#">Formal Shoes</a></li>
+							<li><a href="#">Boots</a></li>
+							<li><a href="#">Flip Flops</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Pages</a>
+						<ul class="sub-menu">
+							<li><a href="./product.html">Product Page</a></li>
+							<li><a href="./category.html">Category Page</a></li>
+							<li><a href="./cart.html">Cart Page</a></li>
+							<li><a href="./checkout.html">Checkout Page</a></li>
+							<li><a href="./contact.html">Contact Page</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Blog</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<!-- Header section end -->
+	
+	
+	
+	<br><br>
+	<table class="table table-striped table-dark">
+		<thead >
+			<tr>
+				<th >Payment ID</th>
+				<th >Name</th>
+				<th >Street</th>
+				<th >Apartment</th>
+				<th >City</th>
+				<th >State / Province</th>
+				<th >Zip Code</th>
+				<th >Phone</th>
+				<th >Card No</th>
+				<th >Holder</th>
+				<th >Expire Date</th>
+				<th >Delivery Type</th>
+			</tr>
+		</thead>
+		<tbody>	
+			<tr th:if="${paymentList.empty}">
+            	<td colspan="2"> Payment List </td>
+      	    </tr>
+			<tr th:each="Payment : ${paymentList}">
+				<td th:text="${Payment.paymentid}"></td>
+				<td th:text="${Payment.name}"></td>
+				<td th:text="${Payment.street}"></td>
+				<td th:text="${Payment.apartment}"></td>
+				<td th:text="${Payment.city}"></td>
+				<td th:text="${Payment.state}"></td>
+				<td th:text="${Payment.zip}"></td>
+				<td th:text="${Payment.phone}"></td>
+				<td th:text="${Payment.cardId}"></td>
+				<td th:text="${Payment.holder}"></td>
+				<td th:text="${Payment.expire}"></td>
+				<td th:text="${Payment.delType}"></td>
+				
+    		</tr>
+    	</tbody>	
+	</table>
+	<br><br>
+	
+	
+	
+
+
+	<!-- Footer section -->
+	<section class="footer-section">
+		<div class="container">
+			<div class="footer-logo text-center" style=" vertical-align:-100px;">
+				<a href="index.html"><img src="./img/white 1.png" alt=""></img></a>
+			</div>
+		</div>
+	</section>
+	<!-- Footer section end -->
+
+
+
+	<!--====== Javascripts & Jquery ======-->
+	<script type="text/javascript" src="@{/js/jquery-3.2.1.min.js}"></script>
+	<script type="text/javascript" src="@{/js/bootstrap.min.js}"></script>
+	<script type="text/javascript" src="@{/js/jquery.slicknav.min.js}"></script>
+	<script type="text/javascript" src="@{/js/owl.carousel.min.js}"></script>
+	<script type="text/javascript" src="@{/js/jquery.nicescroll.min.js}"></script>
+	<script type="text/javascript" src="@{/js/jquery.zoom.min.js}"></script>
+	<script type="text/javascript" src="@{/js/jquery-ui.min.js}"></script>
+	<script type="text/javascript" src="@{/js/main.js}"></script>
+</body>
+</html>

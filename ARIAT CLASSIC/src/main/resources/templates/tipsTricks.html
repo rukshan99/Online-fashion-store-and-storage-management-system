@@ -1,0 +1,369 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="utf-8" ></meta>
+		<title>Tips & Tricks</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" ></meta>
+
+		<!-- MATERIAL DESIGN ICONIC FONT -->
+		<link rel="stylesheet" th:href="@{fonts/material-design-iconic-font/css/material-design-iconic-font.min.css}" ></link>
+		<!-- Favicon -->
+		<link th:href="@{img/favicon.ico}" rel="shortcut icon"></link>
+
+		<!-- Google Font -->
+		<link th:href="@{https://fonts.googleapis.com/css?family=Josefin+Sans:300,300i,400,400i,700,700i}" rel="stylesheet" ></link>
+		<!-- STYLE CSS -->
+		
+		<link th:href="@{/css/style.css}" rel="stylesheet" ></link>
+		<link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" ></link>
+		<link th:href="@{/css/font-awesome.min.css}" rel="stylesheet" ></link>
+		<link th:href="@{/css/flaticon.css}" rel="stylesheet" ></link>
+		<link th:href="@{/css/slicknav.min.css}" rel="stylesheet" ></link>
+		<link th:href="@{/css/jquery-ui.min.css}" rel="stylesheet" ></link>
+		<link th:href="@{/css/owl.carousel.min.css}" rel="stylesheet" ></link>
+		<link th:href="@{/css/animate.css}" rel="stylesheet" ></link>
+		<link rel="stylesheet" th:href="@{https://fonts.googleapis.com/css?family=Open+Sans:300,400}"></link>  <!-- Google web font "Open Sans" -->
+  		<link rel="stylesheet" th:href="@{/cssTips/bootstrap.min.css}"></link>                                     <!-- https://getbootstrap.com/ -->
+  		<link rel="stylesheet" th:href="@{/cssTips/fontawesome-all.min.css}"></link>                               <!-- Font awesome -->
+  		<link rel="stylesheet" th:href="@{/slick/slick.css}"></link>
+  		<link rel="stylesheet" th:href="@{/slick/slick-theme.css}"></link>
+  		<link rel="stylesheet" th:href="@{/cssTips/templatemo-style.css}"></link>  
+	</head>
+<body>
+
+	<!-- Header section -->
+	<header class="header-section">
+		<div class="header-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-2 text-center text-lg-left">
+						<!-- logo -->
+						<a href="./index.html" class="site-logo">
+							<img src="img/black 1.png" alt=""></img>
+						</a>
+					</div>
+					<div class="col-xl-6 col-lg-5">
+						<form class="header-search-form">
+							<input type="text" placeholder="Search ...."></input>
+							<button><i class="flaticon-search"></i></button>
+						</form>
+					</div>
+					<div class="col-xl-4 col-lg-10">
+						<div class="user-panel">
+							<div class="up-item">
+								<i class="flaticon-profile"></i>
+								<a href="/login">Sign</a> In or <a href="/register">Create Account</a>
+							</div>
+							<div class="up-item">
+								<div class="shopping-card">
+									<i class="flaticon-bag"></i>
+									<span>0</span>
+								</div>
+								<a href="/cart">Shopping Cart</a>
+							</div>
+							<div class="up-item">
+								<div>
+									<i class="flaticon-profile"></i>
+								</div>
+								<a href="/adminDashboard">Admin </a>/<a href="/customerAccount"> User Account</a>
+							</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		</div>
+		<nav class="main-navbar">
+			<div class="container">
+				<!-- menu -->
+				<ul class="main-menu">
+					<li><a href="/Index">Home</a></li>
+					<li><a href="/Category">Categories</a></li>
+					<li><a href="#">Live-Chat
+						<span class="new">New</span>
+					</a></li>
+					<li><a href="#">Pages</a>
+						<ul class="sub-menu">
+							<li><a href="./product.html">Product Page</a></li>
+							<li><a href="./category.html">Category Page</a></li>
+							<li><a href="./cart.html">Cart Page</a></li>
+							<li><a href="./checkout.html">Checkout Page</a></li>
+							<li><a href="./contact.html">Contact Page</a></li>
+						</ul>
+					</li>
+					<li><a href="/wishlist">Wish List</a></li>
+					<li><a href="/rating">Feedback</a></li>
+					<li><a href="#">About us</a></li>
+					<li><a href="#">Contact us</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<!-- Header section end -->
+	
+	  <!-- Loader -->
+  <div id="loader-wrapper">
+    <div id="loader"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+  </div>
+
+  <div class="container">
+    <div class="tm-top-bar"></div>
+
+    <!-- Welcome section -->
+    <section class="tm-welcome">
+
+      <div class="tm-welcome-left">
+        <!-- Logo -->
+        <div class="tm-logo">
+          <h1 class="tm-site-name">Margot</h1>
+        </div>
+        <div class="tm-welcome-content">
+          <!-- fa icons -->
+          <div class="tm-welcome-icons-container">
+            <i class="fas fa-crown fa-5x tm-welcome-icon"></i>
+            <i class="fas fa-heart fa-5x tm-welcome-icon"></i>
+          </div>
+
+          <h2 class="tm-mb-25">Welcome to Tips & Tricks!</h2>
+          <p class="tm-font-big"><a rel="nofollow" href="#" target="_parent">How to be more stylish?</a> This is a a guide to buy less, shop better and transform your look in the process. Refer this regularly to learn about new tricks and tips about latest fashions and every week features one of your favorite celebrities. Thank you.</p>
+          <a href="#" class="tm-welcome-link tm-font-big">Continue...</a>
+        </div>
+      </div>
+      <div class="tm-welcome-right"></div>
+
+    </section>
+    <div class="tm-bar-2"></div>
+
+    <section class="row tm-section-mb tm-section-2">
+      <div class="col-md-12 tm-section-2-inner">
+        <div class="tm-section-2-left">
+              <div class="tm-img-container tm-img-container-1"></div>
+              <div class="tm-img-container tm-img-container-2"></div>
+        </div>
+        <div class="tm-section-2-right tm-bg-primary">
+          <div class="tm-section-2-text">
+            <h2 class="tm-section-2-header tm-mb-45">Don’t buy something for just one occasion!</h2>
+            <p>We’re all guilty of it. A wedding, a Christmas party, a Friday night reunion in the pub with your friends post-lockdown. Heading somewhere exciting means we inevitably feel like we need something special – and therefore something new – to wear. However, more often than not, as much as we like the piece that we buy, it rarely gets more than one outing.</p>
+            <p class="tm-p-ml">Instead of purchasing something specific for certain events, try to have a few dressier pieces in your wardrobe that are more versatile.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="row tm-section-3">
+      <div class="col-md-12 tm-section-3-inner">
+        <div class="tm-section-3-left tm-bg-primary">
+          <div class="tm-section-3-text">
+            <i class="fas fa-users fa-5x tm-welcome-icon d-block text-center ml-0"></i>
+            <h2 class="tm-section-3-header tm-mb-35">Make an effort to discover new brands!</h2>
+            <p>Another reason we get stuck into style ruts is because we get attached to and comfortable with certain shops. It’s great to have your core favourites who you trust and you know last well, but there are always so many new, amazing brands hitting the market that are waiting to be discovered. From high-end designer labels to more affordable mid-range brands, keep exploring all year round. You’ll end up with some truly special, stylish finds (that – bonus – nobody else has).</p>
+            <a href="#" class="d-block tm-welcome-link">Continue...</a>
+          </div>
+        </div>
+        <div class="tm-section-3-right">
+          <div class="tm-img-container tm-img-container-3"></div>
+        </div>
+      </div>
+  </section>
+
+  <section class="row tm-section-pt tm-section-pb">
+    <div class="col-md-6 mx-auto text-center">
+      <h2 class="tm-text-dark tm-mb-50">Be You!</h2>
+      <p class="tm-text-light-dark tm-font-big">Things don’t have to be too complicated. You can make your life a lot easier with some clever fashion tips that allow you look your best in any occasions. You can adjust your choices based on your personal style, body type and personality.</p>
+    </div>
+  </section>
+
+  <section class="row tm-section-pb">
+    <div class="col-md-12 tm-bg-accent tm-gallery-pad tm-gallery-container mx-auto">
+      <h2 class="text-center tm-mb-45">Gallery</h2>
+      <div class="grid tm-gallery">
+        <figure class="effect-lexi tm-gallery-item">
+          <img src="imgTips/img-01.jpg" alt="Image" class=""></img>
+          <figcaption>
+            <p style="color:white;">Curate Your Colors to Suit Your Skin Tone</p>
+          </figcaption>
+        </figure>
+        <figure class="effect-lexi tm-gallery-item">
+          <img src="imgTips/img-02.jpg" alt="Image" class=""></img>
+          <figcaption>
+            <p style="color:white;">Invest in Styles that Work for Your Shape</p>
+          </figcaption>
+        </figure>
+        <figure class="effect-lexi tm-gallery-item">
+          <img src="imgTips/img-03.jpg" alt="Image" class=""></img>
+          <figcaption>
+            <p style="color:white;">Don’t Be Afraid to Mix Patterns</p>
+          </figcaption>
+        </figure>
+        <figure class="effect-lexi tm-gallery-item">
+          <img src="imgTips/img-04.jpg" alt="Image" class=""></img>
+          <figcaption>
+            <p style="color:white;">Show Just the Right Amount of Skin</p>
+          </figcaption>
+        </figure>
+        <figure class="effect-lexi tm-gallery-item">
+          <img src="imgTips/img-05.jpg" alt="Image" class=""></img>
+          <figcaption>
+            <p style="color:white;">Organize and Edit Your Closet</p>
+          </figcaption>
+        </figure>
+        <figure class="effect-lexi tm-gallery-item">
+          <img src="imgTips/img-06.jpg" alt="Image" class=""></img>
+          <figcaption>
+            <p style="color:white;">Balance Your Top and Bottom</p>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+
+</div> <!-- container -->
+	
+	
+	
+	
+	
+	
+	
+   	<!-- Footer section -->
+	<section class="footer-section">
+		<div class="container">
+			<div class="footer-logo text-center">
+				<a href="index.html"><img src="./img/white 1.png" alt=""></img></a>
+			</div>
+			<div class="row">
+				<div class="col-lg-3 col-sm-6">
+					<div class="footer-widget about-widget">
+						<h2>About</h2>
+						<p>Quality fasion products from our factory outlet.</p>
+						<img src="img/cards.png" alt=""></img>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="footer-widget about-widget">
+						<h2>Questions</h2>
+						<ul>
+							<li><a href="">About Us</a></li>
+							<li><a href="">Track Orders</a></li>
+							<li><a href="">Returns</a></li>
+							<li><a href="">Jobs</a></li>
+							<li><a href="">Shipping</a></li>
+							<li><a href="">Blog</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Partners</a></li>
+							<li><a href="">Bloggers</a></li>
+							<li><a href="">Support</a></li>
+							<li><a href="">Terms of Use</a></li>
+							<li><a href="">Press</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="footer-widget about-widget">
+						<h2>Questions</h2>
+						<div class="fw-latest-post-widget">
+							<div class="lp-item">
+								<div class="lp-thumb set-bg" data-setbg="img/blog-thumbs/1.jpg"></div>
+								<div class="lp-content">
+									<h6>what shoes to wear</h6>
+									<span>Oct 21, 2018</span>
+									<a href="#" class="readmore">Read More</a>
+								</div>
+							</div>
+							<div class="lp-item">
+								<div class="lp-thumb set-bg" data-setbg="img/blog-thumbs/2.jpg"></div>
+								<div class="lp-content">
+									<h6>trends this year</h6>
+									<span>Oct 21, 2018</span>
+									<a href="#" class="readmore">Read More</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="footer-widget contact-widget">
+						<h2>Questions</h2>
+						<div class="con-info">
+							<span>C.</span>
+							<p>Your Company Ltd </p>
+						</div>
+						<div class="con-info">
+							<span>B.</span>
+							<p>1481 Creekside Lane  Avila Beach, CA 93424, P.O. BOX 68 </p>
+						</div>
+						<div class="con-info">
+							<span>T.</span>
+							<p>+53 345 7953 32453</p>
+						</div>
+						<div class="con-info">
+							<span>E.</span>
+							<p>office@youremail.com</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="social-links-warp">
+			<div class="container">
+				<div class="social-links">
+					<a href="" class="instagram"><i class="fa fa-instagram"></i><span>instagram</span></a>
+					<a href="" class="google-plus"><i class="fa fa-google-plus"></i><span>g+plus</span></a>
+					<a href="" class="pinterest"><i class="fa fa-pinterest"></i><span>pinterest</span></a>
+					<a href="" class="facebook"><i class="fa fa-facebook"></i><span>facebook</span></a>
+					<a href="" class="twitter"><i class="fa fa-twitter"></i><span>twitter</span></a>
+					<a href="" class="youtube"><i class="fa fa-youtube"></i><span>youtube</span></a>
+					<a href="" class="tumblr"><i class="fa fa-tumblr-square"></i><span>tumblr</span></a>
+				</div>
+
+			</div>
+		</div>
+	</section>
+	<!-- Footer section end -->
+
+<script src="js/jquery-3.2.1.slim.min.js"></script>
+<script src="slick/slick.min.js"></script>
+<script>
+
+  $(function(){
+    $('.tm-gallery').slick({
+      dots: true,
+      infinite: true,
+      slidesToShow: 4,
+      slidesToScroll: 2,
+      responsive: [
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+    ]
+    });
+  });
+
+</script>
+
+</body>
+</html>

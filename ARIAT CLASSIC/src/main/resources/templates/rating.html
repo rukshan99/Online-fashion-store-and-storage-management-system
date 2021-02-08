@@ -1,0 +1,267 @@
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"></meta>
+    <title>Reviews And Ratings</title>
+    
+    <!-- MATERIAL DESIGN ICONIC FONT -->
+		<link rel="stylesheet" th:href="@{fonts/material-design-iconic-font/css/material-design-iconic-font.min.css}" ></link>
+		<!-- Favicon -->
+		<link th:href="@{img/favicon.ico}" rel="shortcut icon"></link>
+
+		<!-- Google Font -->
+		<link th:href="@{https://fonts.googleapis.com/css?family=Josefin+Sans:300,300i,400,400i,700,700i}" rel="stylesheet" ></link>
+		<!-- STYLE CSS -->
+		<link th:href="@{/css/regstyle.css}" rel="stylesheet" ></link>
+		<link th:href="@{/css/style.css}" rel="stylesheet" ></link>
+		<link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" ></link>
+		<link th:href="@{/css/font-awesome.min.css}" rel="stylesheet" ></link>
+		<link th:href="@{/css/flaticon.css}" rel="stylesheet" ></link>
+		<link th:href="@{/css/slicknav.min.css}" rel="stylesheet" ></link>
+		<link th:href="@{/css/jquery-ui.min.css}" rel="stylesheet" ></link>
+		<link th:href="@{/css/owl.carousel.min.css}" rel="stylesheet" ></link>
+		<link th:href="@{/css/animate.css}" rel="stylesheet" ></link>
+    
+
+	<link rel="stylesheet" th:href="@{/static/style.css}"></link>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+    
+    <link rel="stylesheet" th:href="@{/static/Stars.css}"></link>
+</head>
+    <body>
+    
+	<!-- Header section -->
+	<header class="header-section">
+		<div class="header-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-2 text-center text-lg-left">
+						<!-- logo -->
+						<a href="./index.html" class="site-logo">
+							<img src="img/black 1.png" alt=""></img>
+						</a>
+					</div>
+					<div class="col-xl-6 col-lg-5">
+						<form class="header-search-form">
+							<input type="text" placeholder="Search ...."></input>
+							<button><i class="flaticon-search"></i></button>
+						</form>
+					</div>
+					<div class="col-xl-4 col-lg-10">
+						<div class="user-panel">
+							<div class="up-item">
+								<i class="flaticon-profile"></i>
+								<a href="/login">Sign</a> In or <a href="/register">Create Account</a>
+							</div>
+							<div class="up-item">
+								<div class="shopping-card">
+									<i class="flaticon-bag"></i>
+									<span>0</span>
+								</div>
+								<a href="/cart">Shopping Cart</a>
+							</div>
+							<div class="up-item">
+								<div>
+									<i class="flaticon-profile"></i>
+								</div>
+								<a href="/adminDashboard">Admin</a>
+							</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		</div>
+		<nav class="main-navbar">
+			<div class="container">
+				<!-- menu -->
+				<ul class="main-menu">
+					<li><a href="/Index">Home</a></li>
+					<li><a href="/Category">Categories</a></li>
+					<li><a href="#">Live-Chat
+						<span class="new">New</span>
+					</a></li>
+					<li><a href="#">Pages</a>
+						<ul class="sub-menu">
+							<li><a href="./product.html">Product Page</a></li>
+							<li><a href="./category.html">Category Page</a></li>
+							<li><a href="./cart.html">Cart Page</a></li>
+							<li><a href="./checkout.html">Checkout Page</a></li>
+							<li><a href="./contact.html">Contact Page</a></li>
+						</ul>
+					</li>
+					<li><a href="/wishlist">Wish List</a></li>
+					<li><a href="/rating">Feedback</a></li>
+					<li><a href="#">About us</a></li>
+					<li><a href="#">Contact us</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<!-- Header section end -->
+    
+ <!-- rating --> 
+ <div class="wrapper" style="background-image: url('images/bg-registration-form-2.jpg');">
+			<div class="inner">
+  
+        <form action="#" th:action="@{/rating}" th:object="${rating}" method="Post">
+           
+                	<div class="form-wrapper">
+                    <label for="Name">Name</label><br></br>
+                    <input th:field="*{Name}" type="text" name="Name"></input>
+                	</div>
+                	<br></br>
+                	<div  class="form-wrapper">
+                    <label for="Email">Email</label><br></br>
+                    <input th:field="*{Email}" type="Email" name="Email"></input>
+               		</div>
+               		<br></br>
+               		<div  class="form-wrapper">
+                    <label for="Rate">Rate</label><br></br>
+                    
+  							<fieldset>
+   								 <span class="star-cb-group">
+      								<input type="radio" id="rating-5" name="rating" value="5" ></input><label for="rating-5">5</label>
+      								<input type="radio" id="rating-4" name="rating" value="4" ></input><label for="rating-4">4</label>
+							      	<input type="radio" id="rating-3" name="rating" value="3" ></input><label for="rating-3">3</label>
+							      	<input type="radio" id="rating-2" name="rating" value="2" ></input><label for="rating-2">2</label>
+							      	<input type="radio" id="rating-1" name="rating" value="1" ></input><label for="rating-1">1</label>
+							      	<input type="radio" id="rating-0" name="rating" value="0" class="star-cb-clear" ></input><label for="rating-0">0</label>
+			    				</span>
+ 							</fieldset>
+ 						
+					
+      				<input type="text" th:field="*{rate}" name="rate" id="rating-value"></input> 							
+                     </div>
+
+   					<br></br>
+					<div  class="form-wrapper">
+                    <label for="Comment">Comment</label><br></br>
+                    <input th:field="*{Comment}" type="hidden" name="Comment"></input>
+                    <textarea class="comment-area" cols="50" id="new-review" name="comment" placeholder="Enter your review here..." rows="5"></textarea>
+					</div>              
+              		<br></br>
+              		<div  class="form-wrapper">
+                    <input type="submit" value="Submit"></input>
+                    <input type="reset" value="Clear"></input>
+                    </div>
+
+               
+        </form>
+        </div>
+      </div>
+        <script src="static/script.js"></script>
+        
+ <!-- rating End -->  
+        
+        
+        	<!-- Footer section -->
+	<section class="footer-section">
+		<div class="container">
+			<div class="footer-logo text-center">
+				<a href="index.html"><img src="./img/white 1.png" alt=""></img></a>
+			</div>
+			<div class="row">
+				<div class="col-lg-3 col-sm-6">
+					<div class="footer-widget about-widget">
+						<h2>About</h2>
+						<p>Quality fasion products from our factory outlet.</p>
+						<img src="img/cards.png" alt=""></img>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="footer-widget about-widget">
+						<h2>Questions</h2>
+						<ul>
+							<li><a href="">About Us</a></li>
+							<li><a href="">Track Orders</a></li>
+							<li><a href="">Returns</a></li>
+							<li><a href="">Jobs</a></li>
+							<li><a href="">Shipping</a></li>
+							<li><a href="">Blog</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Partners</a></li>
+							<li><a href="">Bloggers</a></li>
+							<li><a href="">Support</a></li>
+							<li><a href="">Terms of Use</a></li>
+							<li><a href="">Press</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="footer-widget about-widget">
+						<h2>Questions</h2>
+						<div class="fw-latest-post-widget">
+							<div class="lp-item">
+								<div class="lp-thumb set-bg" data-setbg="img/blog-thumbs/1.jpg"></div>
+								<div class="lp-content">
+									<h6>what shoes to wear</h6>
+									<span>Oct 21, 2018</span>
+									<a href="#" class="readmore">Read More</a>
+								</div>
+							</div>
+							<div class="lp-item">
+								<div class="lp-thumb set-bg" data-setbg="img/blog-thumbs/2.jpg"></div>
+								<div class="lp-content">
+									<h6>trends this year</h6>
+									<span>Oct 21, 2018</span>
+									<a href="#" class="readmore">Read More</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="footer-widget contact-widget">
+						<h2>Questions</h2>
+						<div class="con-info">
+							<span>C.</span>
+							<p>Your Company Ltd </p>
+						</div>
+						<div class="con-info">
+							<span>B.</span>
+							<p>1481 Creekside Lane  Avila Beach, CA 93424, P.O. BOX 68 </p>
+						</div>
+						<div class="con-info">
+							<span>T.</span>
+							<p>+53 345 7953 32453</p>
+						</div>
+						<div class="con-info">
+							<span>E.</span>
+							<p>office@youremail.com</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="social-links-warp">
+			<div class="container">
+				<div class="social-links">
+					<a href="" class="instagram"><i class="fa fa-instagram"></i><span>instagram</span></a>
+					<a href="" class="google-plus"><i class="fa fa-google-plus"></i><span>g+plus</span></a>
+					<a href="" class="pinterest"><i class="fa fa-pinterest"></i><span>pinterest</span></a>
+					<a href="" class="facebook"><i class="fa fa-facebook"></i><span>facebook</span></a>
+					<a href="" class="twitter"><i class="fa fa-twitter"></i><span>twitter</span></a>
+					<a href="" class="youtube"><i class="fa fa-youtube"></i><span>youtube</span></a>
+					<a href="" class="tumblr"><i class="fa fa-tumblr-square"></i><span>tumblr</span></a>
+				</div>
+
+			</div>
+		</div>
+	</section>
+	<!-- Footer section end -->
+
+
+
+	<!--====== Javascripts & Jquery ======-->
+	<script type="text/javascript" src="@{/js/jquery-3.2.1.min.js}"></script>
+	<script type="text/javascript" src="@{/js/bootstrap.min.js}"></script>
+	<script type="text/javascript" src="@{/js/jquery.slicknav.min.js}"></script>
+	<script type="text/javascript" src="@{/js/owl.carousel.min.js}"></script>
+	<script type="text/javascript" src="@{/js/jquery.nicescroll.min.js}"></script>
+	<script type="text/javascript" src="@{/js/jquery.zoom.min.js}"></script>
+	<script type="text/javascript" src="@{/js/jquery-ui.min.js}"></script>
+	<script type="text/javascript" src="@{/js/main.js}"></script>
+    </body>
+</html>

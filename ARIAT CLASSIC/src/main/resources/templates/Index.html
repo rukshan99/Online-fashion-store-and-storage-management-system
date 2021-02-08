@@ -1,0 +1,496 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="utf-8" ></meta>
+		<title>Home</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" ></meta>
+
+		<!-- MATERIAL DESIGN ICONIC FONT -->
+		<link rel="stylesheet" th:href="@{fonts/material-design-iconic-font/css/material-design-iconic-font.min.css}" ></link>
+		<!-- Favicon -->
+		<link th:href="@{img/favicon.ico}" rel="shortcut icon"></link>
+
+		<!-- Google Font -->
+		<link th:href="@{https://fonts.googleapis.com/css?family=Josefin+Sans:300,300i,400,400i,700,700i}" rel="stylesheet" ></link>
+		<!-- STYLE CSS -->
+	
+		<link th:href="@{/css/style.css}" rel="stylesheet" ></link>
+		<link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" ></link>
+		<link th:href="@{/css/font-awesome.min.css}" rel="stylesheet" ></link>
+		<link th:href="@{/css/flaticon.css}" rel="stylesheet" ></link>
+		<link th:href="@{/css/slicknav.min.css}" rel="stylesheet" ></link>
+		<link th:href="@{/css/jquery-ui.min.css}" rel="stylesheet" ></link>
+		<link th:href="@{/css/owl.carousel.min.css}" rel="stylesheet" ></link>
+		<link th:href="@{/css/animate.css}" rel="stylesheet" ></link>
+	</head>
+
+	<body>
+
+
+	<!-- Header section -->
+	<header class="header-section">
+		<div class="header-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-2 text-center text-lg-left">
+						<!-- logo -->
+						<a href="./index.html" class="site-logo">
+							<img src="img/black 1.png" alt=""></img>
+						</a>
+					</div>
+					<div class="col-xl-6 col-lg-5">
+						<form class="header-search-form">
+							<input type="text" placeholder="Search ...."></input>
+							<button><i class="flaticon-search"></i></button>
+						</form>
+					</div>
+					<div class="col-xl-4 col-lg-10">
+						<div class="user-panel">
+							<div class="up-item">
+								<i class="flaticon-profile"></i>
+								<a href="/login">Sign</a> In or <a href="/register">Create Account</a>
+							</div>
+							<div class="up-item">
+								<div class="shopping-card">
+									<i class="flaticon-bag"></i>
+									<span>0</span>
+								</div>
+								<a href="/cart">Shopping Cart</a>
+							</div>
+							<div class="up-item">
+								<div>
+									<i class="flaticon-profile"></i>
+								</div>
+								<a href="/adminDashboard">Admin </a>/<a href="/customerAccount"> User Account</a>
+							</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		</div>
+		<nav class="main-navbar">
+			<div class="container">
+				<!-- menu -->
+				<ul class="main-menu">
+					<li><a href="/Index">Home</a></li>
+					<li><a href="/Category">Categories</a></li>
+					<li><a href="#">Live-Chat
+						<span class="new">New</span>
+					</a></li>
+					<li><a href="#">Pages</a>
+						<ul class="sub-menu">
+							<li><a href="./product.html">Product Page</a></li>
+							<li><a href="./category.html">Category Page</a></li>
+							<li><a href="./cart.html">Cart Page</a></li>
+							<li><a href="./checkout.html">Checkout Page</a></li>
+							<li><a href="./contact.html">Contact Page</a></li>
+						</ul>
+					</li>
+					<li><a href="/wishlist">Wish List</a></li>
+					<li><a href="/rating">Feedback</a></li>
+					<li><a href="#">About us</a></li>
+					<li><a href="#">Contact us</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<!-- Header section end -->
+
+
+
+	<!-- Hero section -->
+	<section class="hero-section">
+		<div class="hero-slider owl-carousel">
+			<div class="hs-item set-bg" data-setbg="img/bg.jpg">
+				<div class="container">
+					<div class="row">
+						<div class="col-xl-6 col-lg-7 text-white">
+							<span>New Arrivals</span>
+							<h2>denim jackets</h2>
+							<p>The most common denim is indigo denim, in which the warp thread is dyed, while the weft thread is left white. As a result of the warp-faced twill weaving, one side of the textile is dominated by the blue warp threads and the other side is dominated by the white weft threads. This causes blue jeans to be white on the inside.</p>
+							<a href="#" class="site-btn sb-line">DISCOVER</a>
+							<a href="#" class="site-btn sb-white">ADD TO CART</a>
+						</div>
+					</div>
+					<div class="offer-card text-white">
+						<span>from</span>
+						<h2>Rs.5000.00</h2>
+						<p>SHOP NOW</p>
+					</div>
+				</div>
+			</div>
+			<div class="hs-item set-bg" data-setbg="img/bg-2.jpg">
+				<div class="container">
+					<div class="row">
+						<div class="col-xl-6 col-lg-7 text-white">
+							<span>New Arrivals</span>
+							<h2>denim jackets</h2>
+							<p>The most common denim is indigo denim, in which the warp thread is dyed, while the weft thread is left white. As a result of the warp-faced twill weaving, one side of the textile is dominated by the blue warp threads and the other side is dominated by the white weft threads. This causes blue jeans to be white on the inside. </p>
+							<a href="#" class="site-btn sb-line">DISCOVER</a>
+							<a href="#" class="site-btn sb-white">ADD TO CART</a>
+						</div>
+					</div>
+					<div class="offer-card text-white">
+						<span>from</span>
+						<h2>Rs.10000.00</h2>
+						<p>SHOP NOW</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="slide-num-holder" id="snh-1"></div>
+		</div>
+	</section>
+	<!-- Hero section end -->
+
+
+
+	<!-- letest product section -->
+	<section class="top-letest-product-section">
+		<div class="container">
+			<div class="section-title">
+				<h2>LATEST PRODUCTS</h2>
+			</div>
+			<div class="product-slider owl-carousel">
+				<div class="product-item">
+					<div class="pi-pic">
+						<img src="./img/product/61.jpg" alt=""></img>
+						<div class="pi-links">
+							<a href="/cart" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+							<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+						</div>
+					</div>
+					<div class="pi-text">
+						<h6>Rs.3000.00</h6>
+						<p>Flamboyant Pink Top </p>
+					</div>
+				</div>
+				<div class="product-item">
+					<div class="pi-pic">
+						<div class="tag-new">New</div>
+						<img src="./img/product/62.jpg" alt=""></img>
+						<div class="pi-links">
+							<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+							<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+						</div>
+					</div>
+					<div class="pi-text">
+						<h6>Rs.3000.00</h6>
+						<p>Black and White Stripes Dress</p>
+					</div>
+				</div>
+				<div class="product-item">
+					<div class="pi-pic">
+						<img src="./img/product/63.jpg" alt=""></img>
+						<div class="pi-links">
+							<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+							<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+						</div>
+					</div>
+					<div class="pi-text">
+						<h6>Rs.3000.00</h6>
+						<p>Flamboyant Pink Top </p>
+					</div>
+				</div>
+				<div class="product-item">
+						<div class="pi-pic">
+							<img src="./img/product/64.jpg" alt=""></img>
+							<div class="pi-links">
+								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+							</div>
+						</div>
+						<div class="pi-text">
+							<h6>Rs.3000.00</h6>
+							<p>Flamboyant Pink Top </p>
+						</div>
+					</div>
+				<div class="product-item">
+						<div class="pi-pic">
+							<img src="./img/product/66.jpg" alt=""></img>
+							<div class="pi-links">
+								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+							</div>
+						</div>
+						<div class="pi-text">
+							<h6>Rs.3000.00</h6>
+							<p>Flamboyant Pink Top </p>
+						</div>
+					</div>
+			</div>
+		</div>
+	</section>
+	<!-- letest product section end -->
+
+
+
+	<!-- Product filter section -->
+	<section class="product-filter-section">
+		<div class="container">
+			<div class="section-title">
+				<h2>BROWSE TOP SELLING PRODUCTS</h2>
+			</div>
+			<ul class="product-filter-menu">
+				<li><a href="#">TOPS</a></li>
+				<li><a href="#">JUMPSUITS</a></li>
+				<li><a href="#">LINGERIE</a></li>
+				<li><a href="#">JEANS</a></li>
+				<li><a href="#">DRESSES</a></li>
+				<li><a href="#">COATS</a></li>
+				<li><a href="#">JUMPERS</a></li>
+				<li><a href="#">LEGGINGS</a></li>
+			</ul>
+			<div class="row">
+				<div class="col-lg-3 col-sm-6">
+					<div class="product-item">
+						<div class="pi-pic">
+							<img src="./img/product/65.jpg" alt=""></img>
+							<div class="pi-links">
+								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+							</div>
+						</div>
+						<div class="pi-text">
+							<h6>Rs.2000.00</h6>
+							<p>Flamboyant Pink Top </p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="product-item">
+						<div class="pi-pic">
+							<div class="tag-sale">ON SALE</div>
+							<img src="./img/product/66.jpg" alt=""></img>
+							<div class="pi-links">
+								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+							</div>
+						</div>
+						<div class="pi-text">
+							<h6>Rs.2000.00</h6>
+							<p>Black and White Stripes Dress</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="product-item">
+						<div class="pi-pic">
+							<img src="./img/product/67.jpg" alt=""></img>
+							<div class="pi-links">
+								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+							</div>
+						</div>
+						<div class="pi-text">
+							<h6>Rs.2000.00</h6>
+							<p>Flamboyant Pink Top </p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="product-item">
+						<div class="pi-pic">
+							<img src="./img/product/68.jpg" alt=""></img>
+							<div class="pi-links">
+								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+							</div>
+						</div>
+						<div class="pi-text">
+							<h6>Rs.2000.00</h6>
+							<p>Flamboyant Pink Top </p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="product-item">
+						<div class="pi-pic">
+							<img src="./img/product/69.jpg" alt=""></img>
+							<div class="pi-links">
+								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+							</div>
+						</div>
+						<div class="pi-text">
+							<h6>Rs.2000.00</h6>
+							<p>Flamboyant Pink Top </p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="product-item">
+						<div class="pi-pic">
+							<img src="./img/product/70.jpg" alt=""></img>
+							<div class="pi-links">
+								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+							</div>
+						</div>
+						<div class="pi-text">
+							<h6>Rs.2000.00</h6>
+							<p>Black and White Stripes Dress</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="product-item">
+						<div class="pi-pic">
+							<img src="./img/product/71.jpg" alt=""></img>
+							<div class="pi-links">
+								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+							</div>
+						</div>
+						<div class="pi-text">
+							<h6>Rs.2000.00</h6>
+							<p>Flamboyant Pink Top </p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="product-item">
+						<div class="pi-pic">
+							<img src="./img/product/72.jpg" alt=""></img>
+							<div class="pi-links">
+								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+							</div>
+						</div>
+						<div class="pi-text">
+							<h6>Rs.2000.00</h6>
+							<p>Flamboyant Pink Top </p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Product filter section end -->
+
+
+	<!-- Banner section -->
+	<section class="banner-section">
+		<div class="container">
+			<div class="banner set-bg" data-setbg="img/banner-bg.jpg">
+				<div class="tag-new">NEW</div>
+				<span>New Arrivals</span>
+				<h2>STRIPED SHIRTS</h2>
+				<a href="#" class="site-btn">SHOP NOW</a>
+			</div>
+		</div>
+	</section>
+	<!-- Banner section end  -->
+
+
+	<!-- Footer section -->
+	<section class="footer-section">
+		<div class="container">
+			<div class="footer-logo text-center">
+				<a href="index.html"><img src="./img/white 1.png" alt=""></img></a>
+			</div>
+			<div class="row">
+				<div class="col-lg-3 col-sm-6">
+					<div class="footer-widget about-widget">
+						<h2>About</h2>
+						<p>Quality fasion products from our factory outlet.</p>
+						<img src="img/cards.png" alt=""></img>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="footer-widget about-widget">
+						<h2>Questions</h2>
+						<ul>
+							<li><a href="">About Us</a></li>
+							<li><a href="">Track Orders</a></li>
+							<li><a href="">Returns</a></li>
+							<li><a href="">Jobs</a></li>
+							<li><a href="">Shipping</a></li>
+							<li><a href="">Blog</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Partners</a></li>
+							<li><a href="">Bloggers</a></li>
+							<li><a href="">Support</a></li>
+							<li><a href="">Terms of Use</a></li>
+							<li><a href="">Press</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="footer-widget about-widget">
+						<h2>Questions</h2>
+						<div class="fw-latest-post-widget">
+							<div class="lp-item">
+								<div class="lp-thumb set-bg" data-setbg="img/blog-thumbs/1.jpg"></div>
+								<div class="lp-content">
+									<h6>what shoes to wear</h6>
+									<span>Oct 21, 2018</span>
+									<a href="#" class="readmore">Read More</a>
+								</div>
+							</div>
+							<div class="lp-item">
+								<div class="lp-thumb set-bg" data-setbg="img/blog-thumbs/2.jpg"></div>
+								<div class="lp-content">
+									<h6>trends this year</h6>
+									<span>Oct 21, 2018</span>
+									<a href="#" class="readmore">Read More</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="footer-widget contact-widget">
+						<h2>Questions</h2>
+						<div class="con-info">
+							<span>C.</span>
+							<p>Your Company Ltd </p>
+						</div>
+						<div class="con-info">
+							<span>B.</span>
+							<p>1481 Creekside Lane  Avila Beach, CA 93424, P.O. BOX 68 </p>
+						</div>
+						<div class="con-info">
+							<span>T.</span>
+							<p>+53 345 7953 32453</p>
+						</div>
+						<div class="con-info">
+							<span>E.</span>
+							<p>office@youremail.com</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="social-links-warp">
+			<div class="container">
+				<div class="social-links">
+					<a href="" class="instagram"><i class="fa fa-instagram"></i><span>instagram</span></a>
+					<a href="" class="google-plus"><i class="fa fa-google-plus"></i><span>g+plus</span></a>
+					<a href="" class="pinterest"><i class="fa fa-pinterest"></i><span>pinterest</span></a>
+					<a href="" class="facebook"><i class="fa fa-facebook"></i><span>facebook</span></a>
+					<a href="" class="twitter"><i class="fa fa-twitter"></i><span>twitter</span></a>
+					<a href="" class="youtube"><i class="fa fa-youtube"></i><span>youtube</span></a>
+					<a href="" class="tumblr"><i class="fa fa-tumblr-square"></i><span>tumblr</span></a>
+				</div>
+
+			</div>
+		</div>
+	</section>
+	<!-- Footer section end -->
+
+
+
+	<!--====== Javascripts & Jquery ======-->
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.slicknav.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.nicescroll.min.js"></script>
+	<script src="js/jquery.zoom.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/main.js"></script>
+	</body>
+</html>

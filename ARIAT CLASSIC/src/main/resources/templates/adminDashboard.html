@@ -1,0 +1,156 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="utf-8" ></meta>
+		<title>Admin Dashboard</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" ></meta>
+
+		<!-- MATERIAL DESIGN ICONIC FONT -->
+		<link rel="stylesheet" th:href="@{fonts/material-design-iconic-font/css/material-design-iconic-font.min.css}" ></link>
+		<!-- Favicon -->
+		<link th:href="@{img/favicon.ico}" rel="shortcut icon"></link>
+
+		<!-- Google Font -->
+		<link th:href="@{https://fonts.googleapis.com/css?family=Josefin+Sans:300,300i,400,400i,700,700i}" rel="stylesheet" ></link>
+		<!-- STYLE CSS -->
+		<link th:href="@{/css/loginstyle.css}" rel="stylesheet" ></link>
+		<link th:href="@{/css/style.css}" rel="stylesheet" ></link>
+		<link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" ></link>
+		<link th:href="@{/css/font-awesome.min.css}" rel="stylesheet" ></link>
+		<link th:href="@{/css/flaticon.css}" rel="stylesheet" ></link>
+		<link th:href="@{/css/slicknav.min.css}" rel="stylesheet" ></link>
+		<link th:href="@{/css/jquery-ui.min.css}" rel="stylesheet" ></link>
+		<link th:href="@{/css/owl.carousel.min.css}" rel="stylesheet" ></link>
+		<link th:href="@{/css/animate.css}" rel="stylesheet" ></link>
+	</head>
+<body>
+
+	<!-- Header section -->
+	<header class="header-section">
+		<div class="header-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-2 text-center text-lg-left">
+						<!-- logo -->
+						<a href="./index.html" class="site-logo">
+							<img src="img/black 1.png" alt=""></img>
+						</a>
+					</div>
+							<h2 class="innerx">Welcome to Admin Dashboard</h2>
+				</div>
+			</div>
+		</div>
+			
+		
+		<nav class="main-navbar">
+			<div class="container">
+				<!-- menu -->
+				<ul class="main-menu">
+				<li><a href="/adminDashboard">Dashboard</a></li>
+					<li><a href="#">Store</a>
+						<ul class="sub-menu">
+							<li><a href="/AddProduct">Store Product Details Form</a></li>
+							<li><a href="/ProductDetails">View Store Product Details</a></li>
+							<li><a href="#">Reports</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Customers</a>
+						<ul class="sub-menu">
+							<li><a href="/customerDetails">View Customer Details</a></li>
+							<li><a href="/tokenDetails">View E-mail Confirmation Token Details</a></li>
+							<li><a href="#">Reports</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Employees</a>
+						<ul class="sub-menu">
+							<li><a href="/employee">Employee Details Form</a></li>
+							<li><a href="/attendance">Attendance Marking Form</a></li>
+							<li><a href="#">View Employee Details</a></li>
+							<li><a href="#">View Attendance Details</a></li>
+							<li><a href="#">Employee Reports</a></li>
+							<li><a href="#">Attendance Reports</a></li>							
+						</ul>
+					</li>
+					<li><a href="#">Payments</a>
+						<ul class="sub-menu">
+							<li><a href="/paymentDetails">View Payment Details</a></li>
+							<li><a href="#">Reports</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Inventory</a>
+						<ul class="sub-menu">
+							<li><a href="/inventory">Inventory Products Form</a></li>
+							<li><a href="/inventoryDetails">View Product Details</a></li>
+							<li><a href="#">Reports</a></li>						
+						</ul>
+					</li>
+					<li><a href="#">Deliveries</a>
+						<ul class="sub-menu">
+							<li><a href="/delivery">Delivery Details Form</a></li>
+							<li><a href="#">Vehicle Details Form</a></li>
+							<li><a href="#">View Delivery Details</a></li>
+							<li><a href="#">View Vehicle Details</a></li>
+							<li><a href="#">Reports</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Feedbacks</a>
+						<ul class="sub-menu">
+							<li><a href="/saved">View Feedback Details</a></li>
+							<li><a href="#">Live Chat Form</a></li>
+							<li><a href="#">Reports</a></li>						
+						</ul>
+					</li>
+					<li><a href="#">Promotions</a>
+						<ul class="sub-menu">
+							<li><a href="#">Promotion Details Form</a></li>
+							<li><a href="#">View Promotion Details</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<!-- Header section end -->
+	
+	<div class="inner" style="background-image: url('images/bg-registration-form-2.jpg');">
+		<form th:action="@{/app-logout}" method="post">
+			<Input type="submit" class="myButton0" value="Sign Out"></Input>
+		</form>
+	
+		<h1>System Admin Guide</h1>
+		<h5>Use this guide to learn about your role, and the tools available to you as a System Admin.</h5>
+		<p></p>
+		<h2>Set up Workplace</h2>
+		<p></p>
+		<h5>Customize your Workplace</h5>
+		<p>Add your company name, a logo, and terms of use to your Workplace community.</p>
+		<p></p>
+		<h5>Bring in your IT team</h5>
+		<p>Share the Workplace Technical Resources with your IT team. They’ll find information on IT configuration, authentication, account management, and more.</p>
+		<p></p>
+		<h5>Integrate with your favorite tools</h5>
+		<p>Check out the Integrations Directory to connect Workplace with the tools you use every day.</p>
+		<p></p>
+		<h2>Manage Users, Groups & Content</h2>
+		<p></p>
+		<h5>Add or deactivate users</h5>
+		<p>Add or deactivate users via the People section of the Admin Panel, or automate this process by connecting Workplace to your identity provider.</p>
+		<p></p>
+		<h5>Manage your groups</h5>
+		<p>Manage your organization’s groups from the Groups section of the Admin Panel. Assign admin roles to colleagues to help you moderate your community.</p>
+		<p></p>
+		<h5>Manage content</h5>
+		<p>Promote posts by executives so they appear at the top of everyone’s News Feed. Remove content that violates your Workplace policy from the Reported Content page.</p>
+		<p></p>
+		<h2>Monitor Safety and Engagement</h2>
+		<p></p>
+		<h5>Keep Employees Safe</h5>
+		<p>Use Safety Check on Workplace to check on the safety of your employees during a crisis. Assign Safety Operators to provide help during crises.</p>
+		<p></p>
+		<h5>Measure Engagement</h5>
+		<p>Monitor the Reporting section of the Admin Panel to analyze Workplace adoption and engagement. Use these insights to run contests and campaigns for claim rates, content production, and Workplace education.</p> 
+	</div>
+	
+
+</body>
+</html>
